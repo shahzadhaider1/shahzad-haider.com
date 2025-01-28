@@ -17,6 +17,33 @@ function typeEffect() {
   }
 }
 
+// Create floating code elements
+function createFloatingElements() {
+  const symbols = ['</>', '{...}', '[ ]', '#!/bin/sh', 'func()', 'import', 'go run'];
+  const header = document.querySelector('header');
+  
+  symbols.forEach((symbol, index) => {
+    const element = document.createElement('div');
+    element.className = 'floating-element';
+    element.textContent = symbol;
+    element.style.left = `${Math.random() * 90}%`;
+    element.style.top = `${Math.random() * 90}%`;
+    element.style.fontSize = `${Math.random() * 20 + 10}px`;
+    element.style.animationDelay = `${index * 0.5}s`;
+    header.appendChild(element);
+  });
+}
+
+// Parallax effect for floating elements
+function parallaxEffect(e) {
+  document.querySelectorAll('.floating-element').forEach(element => {
+    const speed = 5;
+    const x = (window.innerWidth - e.pageX * speed) / 100;
+    const y = (window.innerHeight - e.pageY * speed) / 100;
+    element.style.transform = `translateX(${x}px) translateY(${y}px)`;
+  });
+}
+
 // Intersection Observer for Fun Facts animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -27,10 +54,16 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-// Add observers to fun facts
+// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize typing effect
   typeEffect();
+  
+  // Create floating elements
+  createFloatingElements();
+  
+  // Add parallax effect
+  document.addEventListener('mousemove', parallaxEffect);
 
   // Animate fun facts on scroll
   const funFacts = document.querySelectorAll('.fun-section li');
