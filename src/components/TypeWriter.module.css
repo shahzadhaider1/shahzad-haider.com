@@ -1,0 +1,17 @@
+.typewriter {
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background: var(--primary);
+  margin-left: 3px;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
