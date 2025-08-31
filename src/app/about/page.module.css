@@ -1,0 +1,125 @@
+.main {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin: 2rem 0;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  transform: translateX(-5px);
+}
+
+.aboutSection {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.introCard {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.introCard h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.introCard p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.skillCard {
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.skillCard:nth-child(1) { animation-delay: 0.1s; }
+.skillCard:nth-child(2) { animation-delay: 0.2s; }
+.skillCard:nth-child(3) { animation-delay: 0.3s; }
+
+.skillIcon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.skillCard h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.skillCard p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.aspirations {
+  margin: 2rem 0;
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.aspirations h2 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.aspirations p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.connect {
+  text-align: center;
+  margin-top: 3rem;
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.connect h2 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
