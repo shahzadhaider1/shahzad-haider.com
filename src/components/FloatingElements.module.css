@@ -10,27 +10,40 @@
 
 .floatingElement {
   position: absolute;
-  color: rgba(0, 217, 255, 0.1);
+  color: rgba(0, 217, 255, 0.15);
   font-family: var(--font-fira);
   animation: float infinite ease-in-out;
   user-select: none;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.floatingElement:hover {
+  color: rgba(0, 217, 255, 0.3);
 }
 
 @keyframes float {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
-    opacity: 0.1;
+    opacity: 0.15;
   }
   25% {
     transform: translateY(-30px) rotate(5deg);
-    opacity: 0.15;
+    opacity: 0.2;
   }
   50% {
     transform: translateY(-15px) rotate(-5deg);
-    opacity: 0.2;
+    opacity: 0.25;
   }
   75% {
     transform: translateY(-25px) rotate(3deg);
-    opacity: 0.15;
+    opacity: 0.2;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .floatingElement {
+    animation: none;
   }
 }

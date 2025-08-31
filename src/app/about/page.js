@@ -23,14 +23,14 @@ export default function About() {
           
           <div className={styles.content}>
             <div className={`glass-card ${styles.introCard}`}>
-              <h2>Hello! I'm Shahzad Haider 👋</h2>
+              <h2>Hello! {"I'm"} Shahzad Haider 👋</h2>
               <p>
-                I'm a passionate software engineer specializing in backend development and microservices. 
+                {"I'm"} a passionate software engineer specializing in backend development and microservices. 
                 My journey in tech started with solving problems and evolved into building scalable systems 
                 that power businesses.
               </p>
               <p>
-                When I'm not crafting elegant code solutions, you'll find me strategizing in Call of Duty, 
+                When {"I'm"} not crafting elegant code solutions, {"you'll"} find me strategizing in Call of Duty, 
                 enjoying a thrilling game of cricket, or gazing at the stars, contemplating the vastness of 
                 the universe and the endless possibilities in technology.
               </p>
@@ -58,14 +58,14 @@ export default function About() {
               <h2>My Vision 🚀</h2>
               <p>
                 I believe in continuous learning and aspire to become an entrepreneur, using technology 
-                to create impactful solutions that make a difference in people's lives. My goal is to 
+                to create impactful solutions that make a difference in {"people's"} lives. My goal is to 
                 bridge the gap between complex technical solutions and real-world problems, making 
                 technology accessible and beneficial for everyone.
               </p>
             </div>
 
             <div className={styles.connect}>
-              <h2>Let's Connect!</h2>
+              <h2>{"Let's"} Connect!</h2>
               <div className="social-links">
                 <a 
                   href="https://github.com/shahzadhaider1" 
