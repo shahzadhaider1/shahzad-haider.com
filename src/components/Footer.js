@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.content}>
           <p className={styles.copyright}>
-            © 2025 Shahzad Haider. All Rights Reserved.
+            © {new Date().getFullYear()} Shahzad Haider. All Rights Reserved.
           </p>
           <div className={styles.socialLinks}>
             <a 
